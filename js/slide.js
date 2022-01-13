@@ -34,7 +34,7 @@ export default class slide {
     movetype = 'touchmove'
     }
     this.wrapper.addEventListener(movetype, this.onMove);
-    this.transiton(false);
+    this.transition(false);
   }
 
   onMove(event){    
@@ -59,8 +59,8 @@ export default class slide {
     } else {
       this.changeSlide(this.index.active);
     }
-
   }
+
 
   addSlideEvents(){
     this.wrapper.addEventListener('mousedown', this.onStart);
@@ -118,8 +118,8 @@ export default class slide {
 
   init(){
     this.bindEvents();
-    this.addSlideEvents();   
     this.transition(true);
+    this.addSlideEvents();       
     this.slidesConfig();
     return this;
   }
